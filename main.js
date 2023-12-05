@@ -247,7 +247,7 @@ else
 			geometry.vertices.push(new THREE.Vector3(x, y, z));
 		}
 		let material = new THREE.PointsMaterial({
-			size: 1.2,
+			size: 1.4,
 			color: color,
 			transparent: true
 		});
@@ -256,14 +256,14 @@ else
 
 	function createSecondParticles(size, color,n=5000) {
 		let geometry = new THREE.Geometry();
-		for (let i = 0; i < n; i+=3) {
+		for (let i = 0; i < n; i+=6) {
 			let x = -1 + Math.random() * 2;
 			let y = -1 + Math.random() * 2;
 			let z = -1 + Math.random() * 2;
 			let d = 1 / Math.sqrt(x * x + y * y + z * z);
-			x *= d * (size*.8 * d/.5);
-			y *= d * (size*.8 * d/.5);
-			z *= d * (size*.8 * d/.5);
+			x *= (d + (size/0.8 + d/.5)) * 1.3;
+			y *= (d + (size/0.8 + d/.5)) * 1.3;
+			z *= (d + (size/0.8 + d/.5)) * 1.3;
 			geometry.vertices.push(new THREE.Vector3(x, y, z));
 		}
 		let material = new THREE.PointsMaterial({
