@@ -247,7 +247,7 @@ else
 			geometry.vertices.push(new THREE.Vector3(x, y, z));
 		}
 		let material = new THREE.PointsMaterial({
-			size: 1.4,
+			size: 1.6,
 			color: color,
 			transparent: true
 		});
@@ -267,7 +267,7 @@ else
 			geometry.vertices.push(new THREE.Vector3(x, y, z));
 		}
 		let material = new THREE.PointsMaterial({
-			size: 1.2,
+			size: 1.4,
 			color: color,
 			transparent: true
 		});
